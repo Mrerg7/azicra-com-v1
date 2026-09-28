@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   description:
     "Guides on premium domain valuation, Escrow transfers, and Arizona healthcare construction ICRA market trends.",
   alternates: { canonical: "/insights" },
+  openGraph: {
+    title: "Insights — Domain Valuation & Arizona ICRA | azicra.com",
+    description:
+      "Guides on premium domain valuation, Escrow transfers, and Arizona healthcare construction ICRA market trends.",
+    url: "https://azicra.com/insights",
+  },
 };
 
 export default function InsightsPage() {
