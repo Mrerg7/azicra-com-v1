@@ -1,0 +1,27 @@
+# azicra.com — Cloudflare Workers (Free plan)
+# Static assets are free/unlimited; Worker only runs for /api/*
+name = "azicra-com-v1"
+main = "worker/index.ts"
+compatibility_date = "2026-09-28"
+workers_dev = true
+preview_urls = true
+
+[assets]
+directory = "./out"
+binding = "ASSETS"
+# Serve Next.js static export 404.html for unknown routes
+not_found_handling = "404-page"
+# Keep page views on free static assets; only invoke Worker for API
+run_worker_first = ["/api/*"]
+
+# Production custom domains (requires zone on same Cloudflare account)
+[[routes]]
+pattern = "azicra.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.azicra.com"
+custom_domain = true
+
+[observability]
+enabled = false

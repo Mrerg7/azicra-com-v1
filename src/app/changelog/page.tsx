@@ -11,6 +11,17 @@ const entries = [
   {
     date: "2026-09-28",
     tag: "FEAT",
+    title: "Cloudflare Workers free-plan deployment",
+    items: [
+      "Next.js static export served as Workers Static Assets (free & unlimited page views)",
+      "Worker only runs for /api/inquiry via run_worker_first — protects free 100k/day quota",
+      "Custom domains azicra.com + www.azicra.com restored in wrangler.toml",
+      "Security headers via public/_headers (no paid products: no D1/KV/R2)",
+    ],
+  },
+  {
+    date: "2026-09-28",
+    tag: "FEAT",
     title: "Comprehensive CRO + SEO optimization rebuild",
     items: [
       "Above-the-fold domain + price + Buy Now / Make Offer / Contact Agent CTAs",

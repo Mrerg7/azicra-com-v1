@@ -2,10 +2,13 @@
   "name": "azicra-com-v1",
   "version": "0.1.0",
   "private": true,
+  "description": "Premium domain sales site for azicra.com — Cloudflare Workers free plan",
   "scripts": {
     "dev": "next dev --turbopack --hostname 127.0.0.1 --port 43123",
-    "build": "next build --turbopack",
-    "start": "next start --hostname 127.0.0.1 --port 43123",
+    "build": "next build",
+    "preview": "npm run build && wrangler dev --ip 127.0.0.1 --port 43123",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types",
     "lint": "eslint"
   },
   "dependencies": {
@@ -30,7 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "^16.3.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
-  },
-  "description": "Premium domain sales site for azicra.com"
+    "typescript": "^5",
+    "wrangler": "^4.143.0"
+  }
 }
